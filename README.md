@@ -9,7 +9,7 @@ One account per world ID
 
 Once verified you will call the contract to mint a SoulBound NFT that will be your profile 
 
-## Connect to Otpimism Goerli
+## Connect to Optimism Goerli
 
 Contract address
 
