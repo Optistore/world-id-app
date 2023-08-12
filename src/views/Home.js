@@ -10,7 +10,7 @@ import { decodeAbiParameters } from 'viem'
 
 const Home = () => {
     const { web3, address } = useWeb3();
-    const contractAddress = "0x8AE40B519dF44AA7BabE48971976e07eD1a8183a";
+    const contractAddress = "0x58C388bb71Ff2a926963cf888Cd793De700d6E9e";
     const contract = useContract(web3, contractAddress);
     const [details, setDetails] = useState('');
     const [inputDetails, setInputDetails] = useState('');
