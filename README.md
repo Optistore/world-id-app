@@ -3,7 +3,7 @@ world Id app test
 
 https://simulator.worldcoin.org
 
-## Create a new simulator IDENTITY simulator identity #5 or higher(Clicking on the emoji)
+## Create a new worldcoin simulator IDENTITY  #5 or higher(Clicking on the emoji)
 
 One account per world ID
 
