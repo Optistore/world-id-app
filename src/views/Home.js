@@ -10,10 +10,12 @@ import { decodeAbiParameters } from 'viem'
 
 const Home = () => {
     const { web3, address } = useWeb3();
-    const contractAddress = "0x171ecb7e761c9fe5c2337b92b878b4ad209c95ac";
+    const contractAddress = "0x6D7EAB20b1cbfafaCd8c3758f0e2245AD35cd190";
     const contract = useContract(web3, contractAddress);
     const [details, setDetails] = useState('');
     const [inputDetails, setInputDetails] = useState('');
+
+    const [isConnected, setIsConnected] = useState(false);
 
 
  
@@ -47,17 +49,19 @@ const Home = () => {
         try {
             await window.ethereum.request({ method: 'eth_requestAccounts' });
             alert('Connected to MetaMask!');
+            setIsConnected(true); // Set isConnected to true here
         } catch (error) {
             console.error("Error connecting to MetaMask:", error);
             alert('Failed to connect to MetaMask. Please ensure it is installed and active.');
         }
     };
+    
 
     return (
         <div>
             <ConnectButton onConnect={handleConnect} />
             <IDKitWidget
-                app_id="app_staging_25625bb1e6992d263be894cd28235705" // must be an app set to on-chain
+                app_id="app_staging_bac8f2183c543501eb06f7a73282fdf4"
                 action="claim_nft"
                 signal={address}
                 onSuccess={onSuccess}
@@ -65,7 +69,20 @@ const Home = () => {
                 enableTelemetry
                 useSimulator
             >
-                {({ open }) => <button onClick={open}>Verify with World ID</button>}
+                {({ open }) => (
+                    <button 
+                        onClick={() => {
+                            if (isConnected) {
+                                open();
+                            } else {
+                                alert('You need to be connected to proceed.');
+                            }
+                        }}
+                        disabled={!isConnected} // Disable the button if not connected
+                    >
+                        Verify with World ID
+                    </button>
+                )}
             </IDKitWidget>
             <div>
                 <h2>Contract Details:</h2>
