@@ -5,7 +5,7 @@ https://simulator.worldcoin.org
 
 ## Create a new simulator IDENTITY simulator identity #5 or higher(Clicking on the emoji)
 
-One account per world ID , and address
+One account per world ID
 
 Once verified you will call the contract to mint a SoulBound NFT that will be your profile 
 
