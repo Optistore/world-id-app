@@ -10,7 +10,7 @@ import { decodeAbiParameters } from 'viem'
 
 const Home = () => {
     const { web3, address } = useWeb3();
-    const contractAddress = "0x6D7EAB20b1cbfafaCd8c3758f0e2245AD35cd190";
+    const contractAddress = "0x8AE40B519dF44AA7BabE48971976e07eD1a8183a";
     const contract = useContract(web3, contractAddress);
     const [details, setDetails] = useState('');
     const [inputDetails, setInputDetails] = useState('');
@@ -80,7 +80,7 @@ const Home = () => {
                         }}
                         disabled={!isConnected} // Disable the button if not connected
                     >
-                        Verify with World ID
+                        Create Optistore Profile 
                     </button>
                 )}
             </IDKitWidget>

@@ -13,5 +13,5 @@ Once verified you will call the contract to mint a SoulBound NFT that will be yo
 
 Contract address
 
-https://goerli-optimism.etherscan.io/address/0x6D7EAB20b1cbfafaCd8c3758f0e2245AD35cd190
+https://goerli-optimism.etherscan.io/address/0x8AE40B519dF44AA7BabE48971976e07eD1a8183a
 
